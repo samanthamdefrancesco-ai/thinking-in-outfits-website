@@ -1,0 +1,671 @@
+/* ========================================
+   THINKING IN OUTFITS
+   Website by Samantha DeFrancesco
+   ITC 2400 Signature Assignment
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* COLORS AND GLOBAL STYLES */
+
+:root {
+    --cream: #f7f4ee;
+    --ivory: #fffcf8;
+    --chocolate: #352820;
+    --espresso: #241c18;
+    --taupe: #99897b;
+    --sand: #eae2d8;
+    --line: #ded5ca;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--chocolate);
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+h1, h2, h3, p, figure {
+    margin-top: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 88%;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   HERO BANNER
+======================================== */
+
+.hero {
+    min-height: 760px;
+    background-color: #6c5c50;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(29, 22, 19, 0.74),
+            rgba(29, 22, 19, 0.15)
+        ),
+        url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 92%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.65;
+}
+
+.nav-links a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.hero-content {
+    width: 88%;
+    max-width: 1180px;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.hero-content h1 {
+    font-size: clamp(75px, 10vw, 150px);
+    line-height: 0.86;
+    letter-spacing: -4px;
+    margin: 28px 0;
+}
+
+.hero-subtitle {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    margin-bottom: 35px;
+}
+
+/* BUTTONS AND LINKS */
+
+.button {
+    display: inline-block;
+    padding: 15px 28px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.button-light {
+    background: var(--ivory);
+    color: var(--espresso);
+}
+
+.button-light:hover {
+    background: var(--sand);
+}
+
+.button-dark {
+    background: var(--chocolate);
+    color: white;
+}
+
+.button-dark:hover {
+    background: #594438;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 18px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid currentColor;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: opacity 0.3s ease;
+}
+
+.text-link:hover {
+    opacity: 0.55;
+}
+
+/* ========================================
+   WELCOME SECTION
+======================================== */
+
+.intro-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+}
+
+.intro-section h2 {
+    max-width: 800px;
+    margin: 15px auto 25px;
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: 1.05;
+}
+
+.intro-section > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #62564e;
+    font-size: 16px;
+}
+
+/* ========================================
+   FEATURED OUTFIT
+======================================== */
+
+.featured-section {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 9%;
+    padding-bottom: 130px;
+}
+
+.featured-image img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background-color: var(--sand);
+    filter: saturate(0.9);
+}
+
+.featured-image figcaption {
+    padding-top: 14px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--taupe);
+}
+
+.featured-text h2 {
+    font-size: clamp(55px, 6vw, 88px);
+    line-height: 0.95;
+    margin: 15px 0 30px;
+}
+
+.featured-text > p:not(.eyebrow) {
+    max-width: 430px;
+    color: #655950;
+}
+
+/* ========================================
+   THE THOUGHTFUL EDIT
+======================================== */
+
+.discover-section {
+    padding-bottom: 140px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.section-heading > p:last-child {
+    color: #6e6056;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 38px;
+}
+
+.style-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background-color: var(--sand);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.style-card img:hover {
+    filter: brightness(0.95);
+    transform: scale(0.99);
+}
+
+.card-content {
+    padding: 28px 5px;
+}
+
+.card-content h3 {
+    font-size: clamp(38px, 4vw, 55px);
+    line-height: 1.05;
+    margin: 12px 0 18px;
+}
+
+.card-content > p:not(.eyebrow) {
+    max-width: 470px;
+    color: #685b51;
+}
+
+/* ========================================
+   CLOSING STATEMENT
+======================================== */
+
+.closing-section {
+    background-color: var(--sand);
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.closing-section h2 {
+    font-size: clamp(55px, 7vw, 90px);
+    line-height: 0.97;
+    margin: 22px 0 35px;
+}
+
+/* ========================================
+   STYLING CONSULTATIONS PAGE
+======================================== */
+
+.services-hero {
+    min-height: 570px;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(29, 22, 19, 0.75),
+            rgba(29, 22, 19, 0.25)
+        ),
+        url("../images/styling.jpg");
+}
+
+.services-hero .hero-content h1 {
+    font-size: clamp(65px, 8vw, 110px);
+}
+
+.services-intro {
+    padding-top: 110px;
+    padding-bottom: 85px;
+    text-align: center;
+}
+
+.services-intro h2 {
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1;
+    margin: 20px auto;
+}
+
+.services-intro > p:last-child {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #655950;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 90px;
+}
+
+.service-card {
+    background: var(--ivory);
+    padding: 38px 28px;
+}
+
+.service-card h3 {
+    font-size: 40px;
+    line-height: 1;
+    margin: 16px 0;
+}
+
+.service-card p {
+    color: #655950;
+}
+
+.pricing-section {
+    padding-bottom: 110px;
+}
+
+.pricing-section h2 {
+    font-size: clamp(45px, 6vw, 70px);
+    text-align: center;
+}
+
+.pricing-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.pricing-table {
+    width: 100%;
+    min-width: 480px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.pricing-table th {
+    background-color: var(--sand);
+    padding: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.pricing-table td {
+    padding: 22px 20px;
+    border: none;
+}
+
+.pricing-table tbody tr:nth-child(odd) {
+    background-color: var(--ivory);
+}
+
+.pricing-note {
+    font-size: 12px;
+    color: #74665c;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.process-section {
+    background: var(--sand);
+    padding: 95px 0;
+}
+
+.process-section h2 {
+    font-size: clamp(48px, 6vw, 75px);
+    text-align: center;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.process-step {
+    text-align: center;
+}
+
+.process-step h3 {
+    font-size: 33px;
+    margin: 12px 0;
+}
+
+.process-step p {
+    color: #655950;
+}
+
+.contact-section {
+    padding: 110px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: clamp(50px, 6vw, 80px);
+    line-height: 1;
+    margin: 15px 0 25px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    background-color: var(--espresso);
+    color: var(--ivory);
+    text-align: center;
+    padding: 70px 20px 35px;
+}
+
+.footer-logo {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.site-footer > p:not(.footer-logo) {
+    font-size: 12px;
+    color: #d5c8ba;
+}
+
+.site-footer nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin: 35px 0;
+}
+
+.site-footer nav a {
+    font-size: 12px;
+    transition: opacity 0.3s ease;
+}
+
+.site-footer nav a:hover {
+    opacity: 0.6;
+}
+
+.copyright {
+    font-size: 10px !important;
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   RESPONSIVE TABLET LAYOUT
+======================================== */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .featured-section {
+        gap: 5%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ========================================
+   RESPONSIVE MOBILE LAYOUT
+======================================== */
+
+@media (max-width: 650px) {
+
+    .hero {
+        min-height: 680px;
+    }
+
+    .navbar {
+        padding: 23px 0;
+    }
+
+    .logo {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero-content {
+        padding: 85px 0;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(65px, 14vw, 95px);
+        letter-spacing: -2px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .intro-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .featured-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 90px;
+    }
+
+    .featured-text h2 {
+        font-size: 65px;
+    }
+
+    .discover-section {
+        padding-bottom: 90px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .closing-section {
+        padding: 85px 18px;
+    }
+
+    .services-hero {
+        min-height: 600px;
+    }
+
+    .services-intro {
+        padding-top: 80px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .site-footer {
+        padding-top: 55px;
+    }
+
+    .site-footer nav {
+        gap: 15px;
+    }
+
+}
+
+/* Accessibility: Reduce animation if requested */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .style-card img,
+    .button,
+    .text-link,
+    .nav-links a {
+        transition: none;
+    }
+}
+/* Centered section labels */
+
+.text-center {
+    text-align: center;
+}
