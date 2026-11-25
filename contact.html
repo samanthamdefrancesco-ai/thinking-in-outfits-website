@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Thinking in Outfits for personal styling and wardrobe guidance.">
+  <title>Contact & Inquiries | Thinking in Outfits</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="hero services-hero">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="logo">THINKING IN OUTFITS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#outfits">Outfit Inspiration</a></li>
+        <li><a href="index.html#alternatives">Affordable Alternatives</a></li>
+        <li><a href="styling-consultations.html">Styling Consultations</a></li>
+        <li><a href="support.html">Style Quiz & Support</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">YOUR STYLE / YOUR STORY</p>
+      <h1>Let's Connect.</h1>
+      <p class="hero-subtitle">
+        Personal styling begins with getting to know you.
+      </p>
+      <a href="#contact-form" class="button button-light">
+        GET IN TOUCH
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="services-intro container">
+      <p class="eyebrow">THINKING IN OUTFITS</p>
+      <h2>Let's Talk Style.</h2>
+      <p>
+        Whether you're looking to refresh your wardrobe,
+        discover your personal style, or plan an outfit
+        for a special occasion, I'd love to hear from you.
+        Share a little about yourself below.
+      </p>
+    </section>
+
+    <section class="container" aria-labelledby="form-heading">
+      <h2 id="form-heading">Styling Inquiry Form</h2>
+
+      <form id="contact-form" class="styling-form"
+        onsubmit="event.preventDefault(); document.getElementById('form-status').hidden = false;">
+
+        <div class="form-field">
+          <label for="fullname">Full Name *</label>
+          <input type="text" id="fullname" name="fullname"
+            autocomplete="name" minlength="2" maxlength="80"
+            required placeholder="Your full name">
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email"
+            autocomplete="email" required
+            placeholder="you@example.com">
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Phone Number (Optional)</label>
+          <input type="tel" id="phone" name="phone"
+            autocomplete="tel"
+            placeholder="Your phone number">
+        </div>
+
+        <div class="form-field">
+          <label for="service">What are you interested in? *</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="wardrobe">Wardrobe Review</option>
+            <option value="outfits">Personal Outfit Planning</option>
+            <option value="capsule">Capsule Wardrobe</option>
+            <option value="shopping">Personal Shopping</option>
+            <option value="other">Other Styling Support</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="budget">Preferred Styling Budget</label>
+          <select id="budget" name="budget">
+            <option value="">Select your budget</option>
+            <option value="under100">Under $100</option>
+            <option value="100to250">$100–$250</option>
+            <option value="250to500">$250–$500</option>
+            <option value="500plus">$500+</option>
+            <option value="unsure">I'm not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Tell Me About Your Style Goals *</label>
+          <textarea id="message" name="message" rows="6"
+            minlength="20" maxlength="1500" required
+            placeholder="Tell me what you're looking for, your style preferences, wardrobe challenges, or anything else you'd like me to know."></textarea>
+        </div>
+
+        <button type="submit" class="button button-dark">
+          CHECK MY INQUIRY
+        </button>
+        <p id="form-status" role="status" hidden>
+          Your form passed validation. This class project
+          does not send or store submissions.
+        </p>
+      </form>
+    </section>
+
+    <aside class="contact-section">
+      <h2>Prefer to Email?</h2>
+      <p>
+        You can also reach out directly with styling questions.
+      </p>
+      <a class="text-link"
+        href="mailto:defrancesco.s@northeastern.edu?subject=Thinking%20in%20Outfits%20Inquiry">
+        EMAIL ME
+      </a>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-logo">THINKING IN OUTFITS</p>
+    <p>Fashion inspiration and personal styling.</p>
+    <nav aria-label="Footer Navigation">
+      <a href="index.html">Home</a>
+      <a href="styling-consultations.html">Styling Consultations</a>
+      <a href="support.html">Style Quiz & Support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="copyright">
+      &copy; 2026 Thinking in Outfits. All rights reserved.
+    </p>
+  </footer>
+</body>
+</html>

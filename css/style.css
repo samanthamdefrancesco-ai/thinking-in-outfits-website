@@ -669,3 +669,156 @@ img {
 .text-center {
     text-align: center;
 }
+
+
+/* CONTACT FORM */
+.styling-form {
+    max-width: 750px;
+    margin: 30px auto 90px;
+    padding: 40px;
+    background-color: var(--ivory);
+    border: 1px solid var(--line);
+}
+
+.form-field {
+    margin-bottom: 25px;
+}
+
+.form-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--line);
+    background: white;
+    color: var(--chocolate);
+    font: inherit;
+}
+
+.form-field textarea {
+    resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: 2px solid var(--taupe);
+}
+
+.styling-form button {
+    cursor: pointer;
+    border: none;
+}
+
+#form-status {
+    margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+    .styling-form {
+        padding: 20px;
+    }
+}
+
+/* PERSONAL STYLE QUIZ AND SUPPORT */
+
+.style-support {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.quiz-form {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 35px;
+    background: #faf7f0;
+    border: 1px solid #d7c7b6;
+}
+
+.quiz-form fieldset {
+    border: none;
+    padding: 0 0 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #d7c7b6;
+}
+
+.quiz-form legend,
+.quiz-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.quiz-form fieldset label {
+    display: block;
+    margin: 12px 0;
+    cursor: pointer;
+}
+
+.quiz-form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz-form select,
+.quiz-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 12px 0 25px;
+    border: 1px solid #bfae9d;
+    font: inherit;
+}
+
+.quiz-form button {
+    cursor: pointer;
+}
+
+.quiz-result {
+    padding: 30px;
+    margin: 25px auto;
+    max-width: 850px;
+    background: #eee6da;
+    border: 1px solid #d7c7b6;
+}
+
+.quiz-notice {
+    font-size: 0.9rem;
+}
+
+.support-list {
+    max-width: 850px;
+    margin: 25px auto;
+    padding-left: 30px;
+}
+
+.support-list > li {
+    margin-bottom: 30px;
+}
+
+.support-list ul {
+    margin-top: 10px;
+    padding-left: 25px;
+    list-style-type: square;
+}
+
+.support-list ul li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 650px) {
+    .quiz-form {
+        padding: 20px;
+    }
+
+    .style-support {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

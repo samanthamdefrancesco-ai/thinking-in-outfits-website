@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover your personal style and explore styling support from Thinking in Outfits.">
+  <title>Style Quiz & Support | Thinking in Outfits</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="hero services-hero">
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="logo">THINKING IN OUTFITS</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#outfits">Outfit Inspiration</a></li>
+        <li><a href="index.html#alternatives">Affordable Alternatives</a></li>
+        <li><a href="styling-consultations.html">Styling Consultations</a></li>
+        <li><a href="support.html" aria-current="page">Style Quiz & Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">YOUR STYLE / YOUR STORY</p>
+      <h1>Discover Your Personal Style.</h1>
+      <p class="hero-subtitle">
+        Fashion is personal. Let's find what feels like you.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="container style-support" aria-labelledby="quiz-heading">
+      <h2 id="quiz-heading">What's Your Style?</h2>
+      <p>
+        Answer a few questions to explore your style preferences.
+        There are no wrong answers. Personal style is about
+        feeling confident and comfortable being yourself!
+      </p>
+
+      <form id="style-quiz" class="quiz-form">
+        <fieldset>
+          <legend>1. What would you wear for a day out?</legend>
+
+          <label><input type="radio" name="q1" value="classic" required>
+            Tailored trousers and a classic sweater</label>
+          <label><input type="radio" name="q1" value="romantic">
+            A feminine dress and delicate accessories</label>
+          <label><input type="radio" name="q1" value="creative">
+            Statement pieces and unexpected combinations</label>
+          <label><input type="radio" name="q1" value="relaxed">
+            Comfortable denim and a casual top</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Which accessory would you choose?</legend>
+
+          <label><input type="radio" name="q2" value="classic" required>
+            A timeless leather handbag</label>
+          <label><input type="radio" name="q2" value="romantic">
+            Delicate jewelry or a pretty hair accessory</label>
+          <label><input type="radio" name="q2" value="creative">
+            A colorful bag or statement earrings</label>
+          <label><input type="radio" name="q2" value="relaxed">
+            Sneakers or a practical everyday tote</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. What matters most when getting dressed?</legend>
+
+          <label><input type="radio" name="q3" value="classic" required>
+            Looking polished and put together</label>
+          <label><input type="radio" name="q3" value="romantic">
+            Feeling feminine and beautiful</label>
+          <label><input type="radio" name="q3" value="creative">
+            Expressing my individuality</label>
+          <label><input type="radio" name="q3" value="relaxed">
+            Feeling comfortable and effortless</label>
+        </fieldset>
+
+        <label class="quiz-label" for="colors">
+          What colors do you gravitate toward?
+        </label>
+        <select id="colors" name="colors">
+          <option value="neutrals">Mostly neutrals</option>
+          <option value="color">Bright colors</option>
+          <option value="both">A mixture of both</option>
+        </select>
+
+        <label class="quiz-label" for="style-notes">
+          Your Personal Style Notes (Optional)
+        </label>
+        <p>
+          Tell me about pieces you love, outfits you struggle with,
+          trends you'd like to try, your budget, or anything else
+          you'd like me to know.
+        </p>
+        <textarea id="style-notes" name="style-notes" rows="6"
+          placeholder="Write your personal style notes here..."></textarea>
+
+        <button type="submit" class="button button-dark">
+          DISCOVER MY STYLE
+        </button>
+      </form>
+
+      <article id="style-result" class="quiz-result"
+        aria-live="polite" hidden>
+        <h3 id="result-heading"></h3>
+        <p id="result-description"></p>
+        <p>Your style can always evolve. Use this as inspiration!</p>
+      </article>
+
+      <p class="quiz-notice">
+        Your quiz and notes stay in your browser during this visit.
+        This class project does not save or send your answers.
+      </p>
+    </section>
+
+    <section class="container style-support" aria-labelledby="support-heading">
+      <h2 id="support-heading">Personal Styling Support</h2>
+      <p>
+        Thinking in Outfits offers inspiration and personalized
+        guidance for building a wardrobe that works for you.
+      </p>
+      <p>
+        The following hours are proposed examples for this class
+        project. Appointments are not currently bookable online.
+      </p>
+
+      <ol class="support-list">
+        <li>
+          <h3>Personal Styling Consultations</h3>
+          <ul>
+            <li>Tuesday: 6 PM - 8 PM ET</li>
+            <li>Thursday: 6 PM - 8 PM ET</li>
+            <li>Virtual sessions by appointment</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Wardrobe & Capsule Planning</h3>
+          <ul>
+            <li>Wednesday: 6 PM - 8 PM ET</li>
+            <li>Saturday: 10 AM - 1 PM ET</li>
+            <li>Wardrobe reviews and outfit planning</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Personal Shopping Assistance</h3>
+          <ul>
+            <li>Friday: 4 PM - 6 PM ET</li>
+            <li>Saturday: 12 PM - 3 PM ET</li>
+            <li>Online and secondhand shopping recommendations</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Ongoing Styling Guidance</h3>
+          <ul>
+            <li>Monday - Friday: 9 AM - 5 PM ET for inquiries</li>
+            <li>Follow-up sessions by appointment</li>
+            <li>Seasonal outfit planning and styling support</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <aside class="container style-support">
+      <h2>Ready for Personalized Styling?</h2>
+      <p>
+        Have something specific in mind? Share your goals
+        through the contact page.
+      </p>
+      <a class="button button-dark" href="contact.html">
+        CONTACT THINKING IN OUTFITS
+      </a>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-logo">THINKING IN OUTFITS</p>
+    <p>Fashion inspiration and personal styling.</p>
+    <nav aria-label="Footer Navigation">
+      <a href="index.html">Home</a>
+      <a href="styling-consultations.html">Styling Consultations</a>
+      <a href="support.html">Style Quiz & Support</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="copyright">
+      &copy; 2026 Thinking in Outfits. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("style-quiz").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const scores = {
+        classic: 0,
+        romantic: 0,
+        creative: 0,
+        relaxed: 0
+      };
+
+      const answers = this.querySelectorAll('input[type="radio"]:checked');
+
+      answers.forEach(function(answer) {
+        scores[answer.value]++;
+      });
+
+      const style = Object.keys(scores).reduce(function(a, b) {
+        return scores[a] >= scores[b] ? a : b;
+      });
+
+      const results = {
+        classic: ["The Modern Classic",
+          "You love timeless pieces, beautiful basics, and polished outfits. Build on versatile wardrobe staples and add accessories that feel personal."],
+        romantic: ["The Romantic",
+          "You appreciate feminine details, soft textures, and beautiful accessories. Try mixing romantic pieces with classic wardrobe staples."],
+        creative: ["The Creative Stylist",
+          "You love experimenting and expressing your individuality. Statement accessories and unexpected combinations can make an outfit yours."],
+        relaxed: ["The Effortless Dresser",
+          "You value comfort and ease. Great denim, versatile basics, and thoughtfully chosen accessories can keep your outfits casual and stylish."]
+      };
+
+      document.getElementById("result-heading").textContent = results[style][0];
+      document.getElementById("result-description").textContent = results[style][1];
+      document.getElementById("style-result").hidden = false;
+    });
+  </script>
+</body>
+</html>
